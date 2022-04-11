@@ -7,27 +7,23 @@ import SearchIcon from '@mui/icons-material/Search';
 import ExploreIcon from '@mui/icons-material/Explore';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import PersonIcon from '@mui/icons-material/Person';
-import Paper from '@mui/material/Paper';
-
+import { grey } from '@mui/material/colors';
 
 
 export default function Navbar() {
   const [value, setValue] = React.useState(0);
-  
+  const color = grey[900]
 
   return(
     <div className='navbar--container'>
-      <Box>
-      <Paper sx={{
+      <Box sx={{ 
+        color: 'primary',
         position: 'fixed',
-        padding: 1.5,
+        padding: 1,
         bottom: 0, 
         left: 0, 
-        right: 0,
-        overflow: 'hidden', 
-        }} 
-        elevation={3}
-        >
+        right: 0, 
+      }}> 
       <BottomNavigation
         showLabels
         value={value}
@@ -35,13 +31,12 @@ export default function Navbar() {
           setValue(newValue);
         }}
       >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Search" icon={<SearchIcon />} />
-      <BottomNavigationAction label="Explore" icon={<ExploreIcon />} />
-      <BottomNavigationAction label="Library" icon={<CollectionsBookmarkIcon />} />
-      <BottomNavigationAction label="Account" icon={<PersonIcon />} />
-      </BottomNavigation>
-      </Paper>
+        <BottomNavigationAction fontSize='large' label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction fontSize='large' label="Search" icon={<SearchIcon />} />
+        <BottomNavigationAction fontSize='large' label="Explore" icon={<ExploreIcon />} />
+        <BottomNavigationAction fontSize='large' label="Library" icon={<CollectionsBookmarkIcon />} />
+        <BottomNavigationAction fontSize='large' label="Account" icon={<PersonIcon />} />
+      </BottomNavigation>     
       </Box>
     </div>
   ) 
