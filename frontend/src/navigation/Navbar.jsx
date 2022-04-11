@@ -19,7 +19,7 @@ export default function Navbar() {
       <Box sx={{ 
         color: 'primary',
         position: 'fixed',
-        padding: 1,
+        padding: 1.5,
         bottom: 0, 
         left: 0, 
         right: 0, 
