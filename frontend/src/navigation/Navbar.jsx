@@ -20,7 +20,7 @@ export default function Navbar() {
       <Box>
       <Paper sx={{
         position: 'fixed',
-        padding: 1,
+        padding: 1.5,
         bottom: 0, 
         left: 0, 
         right: 0,
