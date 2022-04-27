@@ -1,21 +1,23 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Box from '@mui/material/Box';
-import HomeIcon from '@mui/icons-material/Home';
-import SearchIcon from '@mui/icons-material/Search';
-import ExploreIcon from '@mui/icons-material/Explore';
-import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
-import PersonIcon from '@mui/icons-material/Person';
-import { grey } from '@mui/material/colors';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+
 
 
 export default function Navbar() {
   const [value, setValue] = React.useState(0);
-  const color = grey[900]
+
 
   return(
     <div className='navbar--container'>
+      <nav>
       <Box sx={{ 
         color: 'primary',
         position: 'fixed',
@@ -31,13 +33,38 @@ export default function Navbar() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction fontSize='large' label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction fontSize='large' label="Search" icon={<SearchIcon />} />
-        <BottomNavigationAction fontSize='large' label="Explore" icon={<ExploreIcon />} />
-        <BottomNavigationAction fontSize='large' label="Library" icon={<CollectionsBookmarkIcon />} />
-        <BottomNavigationAction fontSize='large' label="Account" icon={<PersonIcon />} />
+        <Link
+          className="navbar-item_home"
+          to="/homepage"
+        >
+        <BottomNavigationAction fontSize='large' label="Home" icon={<HomeOutlinedIcon />} />
+        </Link>
+        <Link              
+          className="navbar-item_search"
+          to="/search"
+          >
+        <BottomNavigationAction fontSize='large' label="Search" icon={<SearchOutlinedIcon />} />
+        </Link>
+        <Link              
+          className="navbar-item_explore"
+          to="/explore">
+        <BottomNavigationAction fontSize='large' label="Explore" icon={<ExploreOutlinedIcon />} />
+        </Link>
+        <Link              
+          className="navbar-item_library"
+          to="/library"
+          >
+        <BottomNavigationAction fontSize='large' label="Library" icon={<CollectionsBookmarkOutlinedIcon />} />
+        </Link>
+        <Link              
+          className="navbar-item_account"
+          to="/profile"
+          >
+        <BottomNavigationAction fontSize='large' label="Account" icon={<PersonOutlineOutlinedIcon />} />
+        </Link>
       </BottomNavigation>     
       </Box>
+      </nav>     
     </div>
   ) 
 }
