@@ -1,4 +1,10 @@
 import "./styles.css";
+import { 
+  BrowserRouter as
+  Router, 
+  Routes,
+  Route,
+} from "react-router-dom";
 import TopNavBar from "./TopNavBar";
 import Navbar from "./navigation/Navbar";
 import Profile from "./Profile";
@@ -32,6 +38,15 @@ export default function App() {
 
 
   return (
+    <Router>
+    <div className="App">
+      <Navbar />  
+      <TopNavBar />
+      <div className="content">
+        <Routes>
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/profile" element={<Profile />} />
+        </Routes>
     <div 
       className="container">
 
@@ -57,11 +72,14 @@ export default function App() {
     <Profile/>*/}
     <Navbar />
     <TopNavBar />
-    <HomePage />
+ 
     {/* <section className="product-details-main-list">
       <ProductDetails/>
      </section>
 <ExploreByCategory />*/}
+      </div>
+    </div>
   </div>
+  </Router>
   );
 }
