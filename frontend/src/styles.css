@@ -183,7 +183,7 @@ section {
 
 /*-----------------Story Card Styling------------------*/
 
-.storie-card-list  {
+.story-card-list  {
 
   display: flex;
   overflow-y: hidden;
@@ -422,7 +422,7 @@ section {
 /* --------------- Advertisement ------------------ */
 
 
-.adz-container-list {
+.ads-container-list {
 
   padding: 1em;
   padding-left: 2rem;
@@ -433,7 +433,7 @@ section {
   scrollbar-width: none;
  }
  
- .adz-container-list::-webkit-scrollbar {
+ .ads-container-list::-webkit-scrollbar {
  
    display: none;
  }
@@ -503,10 +503,6 @@ section {
   height: 40rem;
   width: 20rem;
 
-}
-.product-info-card  {
-
-  
 }
 
 .product-brand-name {
