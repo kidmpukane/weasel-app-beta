@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductDetails from "../ProductDetails"
+import ProductDetails from "./ProductDetails";
 
 function ProductCard(props) {
   return (
